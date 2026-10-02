@@ -1,0 +1,180 @@
+/* ===== Variáveis de cor ===== */
+:root {
+  --fundo: #101215;
+  --painel: #181b20;
+  --borda: #2a2f37;
+  --texto: #e9ecef;
+  --suave: #9aa3ad;
+  --acento: #8fc1e8;
+  --cromo: linear-gradient(135deg, #f4f6f8 0%, #8d98a5 40%, #e3e8ed 60%, #6b7581 100%);
+}
+
+/* ===== Base ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+body {
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: var(--acento); }
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--acento);
+  outline-offset: 2px;
+}
+
+/* ===== Cabeçalho (Flexbox) ===== */
+.topo {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  padding: 0.9rem 5%;
+  background: rgba(16, 18, 21, 0.95);
+  border-bottom: 1px solid var(--borda);
+}
+.logo {
+  color: var(--texto);
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+.menu { display: flex; gap: 1.5rem; list-style: none; }
+.menu a { color: var(--suave); text-decoration: none; }
+.menu a:hover { color: var(--texto); }
+
+/* ===== Seções ===== */
+.secao { padding: 4rem 5%; max-width: 1200px; margin: 0 auto; }
+.secao h2 { font-size: 1.8rem; margin-bottom: 1.5rem; }
+
+/* ===== Hero (Grid) ===== */
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 5%;
+}
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  color: #e3e8ed; /* cor de reserva */
+  background: var(--cromo);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero p { color: var(--suave); font-size: 1.15rem; margin: 1.2rem 0 2rem; max-width: 34rem; }
+.botoes { display: flex; flex-wrap: wrap; gap: 1rem; }
+.hero-arte img { width: 100%; border-radius: 6px; border: 1px solid var(--borda); }
+.hero-arte figcaption, .galeria figcaption {
+  color: var(--suave);
+  font-size: 0.9rem;
+  padding-top: 0.4rem;
+}
+
+/* ===== Botões ===== */
+.botao {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 0;
+  border-radius: 4px;
+  background: var(--cromo);
+  color: #101215;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+.botao:hover { filter: brightness(1.1); }
+.botao-contorno {
+  background: transparent;
+  color: var(--texto);
+  border: 1px solid var(--suave);
+}
+
+/* ===== Galeria (colunas, estilo mural) ===== */
+.galeria { column-count: 3; column-gap: 1rem; }
+.galeria figure { break-inside: avoid; margin-bottom: 1rem; }
+.galeria img {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--borda);
+  transition: transform 0.2s;
+}
+.galeria img:hover { transform: scale(1.02); }
+
+/* ===== Sobre ===== */
+.sobre article { max-width: 42rem; }
+.sobre p + p { margin-top: 1rem; }
+
+/* ===== Comissões (Grid) ===== */
+.cartoes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.cartoes article {
+  background: var(--painel);
+  border: 1px solid var(--borda);
+  border-left: 4px solid var(--acento);
+  border-radius: 4px;
+  padding: 1.5rem;
+}
+.cartoes h3 { margin-bottom: 0.5rem; }
+.cartoes p { color: var(--suave); }
+
+/* ===== Contato ===== */
+.contato form { display: flex; flex-direction: column; gap: 0.5rem; max-width: 36rem; }
+.contato label { margin-top: 0.6rem; font-weight: 600; }
+.contato input, .contato select, .contato textarea {
+  padding: 0.7rem;
+  background: var(--painel);
+  border: 1px solid var(--borda);
+  border-radius: 4px;
+  color: var(--texto);
+  font: inherit;
+}
+.contato button { align-self: flex-start; margin-top: 1.2rem; }
+
+/* ===== Rodapé ===== */
+.rodape {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1.5rem 5%;
+  border-top: 1px solid var(--borda);
+  color: var(--suave);
+  font-size: 0.9rem;
+}
+
+/* ===== Tablet (até 900px) ===== */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; gap: 2rem; padding-top: 2.5rem; }
+  .galeria { column-count: 2; }
+  .cartoes { grid-template-columns: 1fr; }
+}
+
+/* ===== Celular (até 600px) ===== */
+@media (max-width: 600px) {
+  .topo { justify-content: center; }
+  .menu { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+  .secao { padding: 2.5rem 5%; }
+  .galeria { column-count: 1; }
+  .botoes .botao { width: 100%; text-align: center; }
+  .contato button { align-self: stretch; }
+}
+
+/* ===== Respeita quem desativa animações ===== */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .galeria img { transition: none; }
+}

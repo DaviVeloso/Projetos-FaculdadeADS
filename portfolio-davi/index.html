@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfólio de arte digital de Davi Veloso: fan arts, estudos realistas e comissões.">
+  <title>Davi Veloso — Arte digital</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Cabeçalho com logo e menu de navegação -->
+  <header class="topo">
+    <a class="logo" href="#inicio">Davi Veloso</a>
+    <nav aria-label="Menu principal">
+      <ul class="menu">
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#comissoes">Comissões</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="inicio">
+
+    <!-- Destaque inicial -->
+    <section class="hero">
+      <div class="hero-texto">
+        <h1>Arte digital com acabamento realista e cromado</h1>
+        <p>Fan arts, estudos e comissões desenhados no Clip Studio Paint.</p>
+        <div class="botoes">
+          <a class="botao" href="#galeria">Ver galeria</a>
+          <a class="botao botao-contorno" href="#contato">Pedir uma comissão</a>
+        </div>
+      </div>
+      <figure class="hero-arte">
+        <img src="img/figura-coroada.jpg" width="1400" height="788" alt="Figura encapuzada de máscara rachada e coroa de espinhos, em tons de azul sobre fundo vermelho">
+        <figcaption>Figura coroada</figcaption>
+      </figure>
+    </section>
+
+    <!-- Galeria de trabalhos (estilo ArtStation) -->
+    <section id="galeria" class="secao">
+      <h2>Galeria</h2>
+      <div class="galeria">
+        <figure>
+          <img src="img/figura-coroada.jpg" width="1400" height="788" alt="Figura encapuzada de máscara rachada e coroa de espinhos, em tons de azul sobre fundo vermelho" loading="lazy">
+          <figcaption>Figura coroada</figcaption>
+        </figure>
+        <figure>
+          <img src="img/cavaleiro-skate.jpg" width="933" height="1400" alt="Cavaleiro de armadura metálica fazendo uma manobra de skate, em preto e branco" loading="lazy">
+          <figcaption>Cavaleiro no skate</figcaption>
+        </figure>
+        <figure>
+          <img src="img/rorschach.jpg" width="988" height="1400" alt="Fan art do Rorschach, de Watchmen, com sobretudo marrom e bóton de smiley manchado de sangue" loading="lazy">
+          <figcaption>Rorschach (Watchmen)</figcaption>
+        </figure>
+        <figure>
+          <img src="img/retrato-vermelho.jpg" width="933" height="1400" alt="Retrato realista de uma mulher de franja com pintura facial vermelha e branca em formato de pétalas, sobre fundo vermelho" loading="lazy">
+          <figcaption>Retrato em vermelho</figcaption>
+        </figure>
+        <figure>
+          <img src="img/retrato-flor.jpg" width="1167" height="1400" alt="Retrato realista de um homem de óculos vermelhos com uma flor laranja na boca" loading="lazy">
+          <figcaption>Retrato com flor</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Sobre o artista -->
+    <section id="sobre" class="secao sobre">
+      <h2>Sobre</h2>
+      <article>
+        <p>Sou o Davi, artista digital. Desenho no Clip Studio Paint e gosto de levar o render ao realismo, principalmente em superfícies metálicas e cromadas.</p>
+        <p>Faço fan arts, estudos e comissões. Também publico meus trabalhos na <a href="https://www.artstation.com/davi_veloso" target="_blank" rel="noopener">minha página no ArtStation</a>.</p>
+      </article>
+    </section>
+
+    <!-- Comissões -->
+    <section id="comissoes" class="secao">
+      <h2>Comissões</h2>
+      <div class="cartoes">
+        <article>
+          <h3>Fan art</h3>
+          <p>Seu personagem ou cena favorita, com cores e iluminação trabalhadas.</p>
+        </article>
+        <article>
+          <h3>Corpo inteiro</h3>
+          <p>Personagem completo, com cenário de fundo e resolução pronta para impressão.</p>
+        </article>
+        <article>
+          <h3>Render realista</h3>
+          <p>Peles, cabelos e metais com acabamento realista.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contato (formulário sem envio real nesta etapa) -->
+    <section id="contato" class="secao contato">
+      <h2>Contato</h2>
+      <form action="#" method="post">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="tipo">Tipo de pedido</label>
+        <select id="tipo" name="tipo">
+          <option>Fan art</option>
+          <option>Corpo inteiro</option>
+          <option>Render realista</option>
+          <option>Outro</option>
+        </select>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+        <button class="botao" type="submit">Enviar mensagem</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <p>&copy; 2026 Davi Veloso. Todas as artes pertencem ao autor.</p>
+    <a href="https://www.artstation.com/davi_veloso" target="_blank" rel="noopener">ArtStation</a>
+  </footer>
+
+</body>
+</html>
