@@ -9,7 +9,7 @@
   --cromo: linear-gradient(135deg, #f4f6f8 0%, #8d98a5 40%, #e3e8ed 60%, #6b7581 100%);
 }
 
-/* ===== Base ===== */
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
 body {
@@ -26,7 +26,7 @@ select:focus-visible, textarea:focus-visible {
   outline-offset: 2px;
 }
 
-/* ===== Cabeçalho (Flexbox) ===== */
+
 .topo {
   position: sticky;
   top: 0;
@@ -50,11 +50,11 @@ select:focus-visible, textarea:focus-visible {
 .menu a { color: var(--suave); text-decoration: none; }
 .menu a:hover { color: var(--texto); }
 
-/* ===== Seções ===== */
+
 .secao { padding: 4rem 5%; max-width: 1200px; margin: 0 auto; }
 .secao h2 { font-size: 1.8rem; margin-bottom: 1.5rem; }
 
-/* ===== Hero (Grid) ===== */
+
 .hero {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -84,7 +84,7 @@ select:focus-visible, textarea:focus-visible {
   padding-top: 0.4rem;
 }
 
-/* ===== Botões ===== */
+
 .botao {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -104,7 +104,7 @@ select:focus-visible, textarea:focus-visible {
   border: 1px solid var(--suave);
 }
 
-/* ===== Galeria (colunas, estilo mural) ===== */
+
 .galeria { column-count: 3; column-gap: 1rem; }
 .galeria figure { break-inside: avoid; margin-bottom: 1rem; }
 .galeria img {
@@ -115,11 +115,11 @@ select:focus-visible, textarea:focus-visible {
 }
 .galeria img:hover { transform: scale(1.02); }
 
-/* ===== Sobre ===== */
+
 .sobre article { max-width: 42rem; }
 .sobre p + p { margin-top: 1rem; }
 
-/* ===== Comissões (Grid) ===== */
+
 .cartoes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 .cartoes article {
   background: var(--painel);
@@ -131,7 +131,7 @@ select:focus-visible, textarea:focus-visible {
 .cartoes h3 { margin-bottom: 0.5rem; }
 .cartoes p { color: var(--suave); }
 
-/* ===== Contato ===== */
+
 .contato form { display: flex; flex-direction: column; gap: 0.5rem; max-width: 36rem; }
 .contato label { margin-top: 0.6rem; font-weight: 600; }
 .contato input, .contato select, .contato textarea {
@@ -144,7 +144,7 @@ select:focus-visible, textarea:focus-visible {
 }
 .contato button { align-self: flex-start; margin-top: 1.2rem; }
 
-/* ===== Rodapé ===== */
+
 .rodape {
   display: flex;
   justify-content: space-between;
@@ -156,14 +156,13 @@ select:focus-visible, textarea:focus-visible {
   font-size: 0.9rem;
 }
 
-/* ===== Tablet (até 900px) ===== */
+
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; gap: 2rem; padding-top: 2.5rem; }
   .galeria { column-count: 2; }
   .cartoes { grid-template-columns: 1fr; }
 }
 
-/* ===== Celular (até 600px) ===== */
 @media (max-width: 600px) {
   .topo { justify-content: center; }
   .menu { gap: 1rem; flex-wrap: wrap; justify-content: center; }
@@ -173,7 +172,7 @@ select:focus-visible, textarea:focus-visible {
   .contato button { align-self: stretch; }
 }
 
-/* ===== Respeita quem desativa animações ===== */
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .galeria img { transition: none; }
